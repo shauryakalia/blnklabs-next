@@ -3,12 +3,17 @@ import Router, { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import React, { useState, useEffect } from "react";
 
-export default function Home({ data }) {
+export default function ExpDetails() {
   const [_isMobile, setMobile] = useState();
   useEffect(() => {
     setMobile(isMobile);
     if (!images) Router.push("/");
   }, [setMobile]);
+
+  const scrollToSection = (elemId = "blnkheader") => {
+    var element = document.getElementById(elemId);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
 
   const router = useRouter();
   const { images, descTitle, descSubTitle, desc } = router.query;
@@ -29,6 +34,7 @@ export default function Home({ data }) {
               alt={`${0}-slide`}
               key={0}
               placeholder={images[0]}
+              loading="lazy"
             />
           </div>
         ))}
@@ -37,6 +43,11 @@ export default function Home({ data }) {
         <p className="h2 txtBold">{descTitle}</p>
         <p className="h4">{descSubTitle}</p>
         <p>{desc}</p>
+      </div>
+      <div>
+        <div className="scrollToTopBtn" onClick={() => scrollToSection()}>
+          <i class="bi bi-arrow-up-square"></i>
+        </div>
       </div>
     </>
   ) : null;

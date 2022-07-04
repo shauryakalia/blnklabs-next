@@ -1,5 +1,5 @@
 ---
-title:'Our Story',
+title:'OUR STORY',
 leftTitle:'ITS AN EMOTION',
 rightTitle1:'Many Product expressed with emotions has the potential to achieve the born goal for its consumers',
 rightTitle2:'The recent Pandemic he/ped us to understand the Human emotions at its core
@@ -12,4 +12,7 @@ osImgUrl3:'/assets/6thPage/C03.png',
 osImgUrl4:'/assets/6thPage/C04.png',
 osImgUrl5:'/assets/6thPage/C05.png',
 osImgUrl6:'/assets/6thPage/C06.png',
+osImgUrl7:'/assets/6thPage/C07.jpg',
+dotsImgUrl:'/assets/6thPage/dots2.png',
+ourStoryEndText:'COMING SOON'
 ---

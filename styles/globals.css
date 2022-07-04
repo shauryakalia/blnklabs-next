@@ -24,9 +24,22 @@ a {
   box-sizing: border-box;
 }
 
+.textDark {
+  color: black !important;
+}
+
+.scrollToTopBtn {
+  cursor: pointer;
+  font-size: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  color: black;
+}
+
 .headerMenu {
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   align-items: center;
 }
 
@@ -79,15 +92,13 @@ a {
   right: 365px !important;
 }
 
+.clrgainsboro {
+  color: gainsboro;
+}
+
 .squareBox {
-  background-image: linear-gradient(45deg, #ccc 30%, transparent 10%),
-    linear-gradient(-45deg, #ccc 25%, transparent 10%),
-    linear-gradient(45deg, transparent 75%, #ccc 25%),
-    linear-gradient(-45deg, transparent 75%, #ccc 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   height: 40px;
-  width: 80px;
+  width: 60px;
 }
 
 .textDark {
@@ -109,15 +120,16 @@ a {
   font-weight: 900;
   color: tomato;
 
-  --x-offset: -0.0625em;
-  --y-offset: 0.0625em;
-  --stroke: 0.025em;
+  --x-offset: 0.0625em;
+  --y-offset: 0.3925em;
+  --stroke: 0.035em;
+
   --background-color: white;
-  --stroke-color: lightblue;
+  --stroke-color: #fb7c2c;
 
   text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
     calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke))
-      0px var(--stroke-color);
+      3px var(--stroke-color);
 
   @supports (text-shadow: 1px 1px 1px 1px black) {
     h1 {
@@ -141,10 +153,26 @@ a {
 }
 
 .enterButton {
-  border: 5px solid;
-  padding: 10px;
+  border: 1px solid black;
+  padding: 5px;
   border-left: 0;
   border-right: 0;
+  font-size: 22px;
+  color: gainsboro;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.enterButton a {
+  color: gainsboro !important;
+  text-decoration: none !important;
+}
+
+.ourStoryLastSection {
+  margin: 0;
+  background: #fb7c2c;
+  margin-top: -10px;
+  padding: 25px;
 }
 
 .fontWeightNormal {
@@ -247,12 +275,20 @@ strong {
   font-weight: 100;
 }
 
+.fs30 {
+  font-size: 30px;
+}
+
 .fs40 {
   font-size: 40px;
 }
 
 .fs50 {
   font-size: 50px;
+}
+
+.fs70 {
+  font-size: 70px;
 }
 
 .img-border {
@@ -276,6 +312,11 @@ strong {
   padding: 20px;
   color: inherit;
   text-decoration: none;
+}
+
+.canvas-mobile {
+  width: 320px !important;
+  margin: 10% !important;
 }
 
 .canvas_border {
@@ -329,7 +370,13 @@ strong {
 }
 
 .mobile-canvas_copy--left {
-  left: 25% !important;
+  bottom: -30% !important;
+  left: 75% !important;
+}
+
+.mobile-canvas_copy--right {
+  left: -15% !important;
+  bottom: -55% !important;
 }
 
 .canvas_copy--left {

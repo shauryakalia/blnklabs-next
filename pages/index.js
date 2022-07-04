@@ -31,7 +31,6 @@ export default function MainPage({ completeData }) {
       <ExperimentPage data={fifthPage} />
       <br />
       <OurStory data={ourStory} />
-      <br />
       <LastPage data={lastPage} />
     </div>
   );

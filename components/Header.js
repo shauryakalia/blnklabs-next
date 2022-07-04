@@ -16,14 +16,17 @@ export default function Header(props) {
   }, [setMobile]);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light px-5 d-flex justify-content-between rounded">
+    <nav
+      id="blnkheader"
+      className="navbar navbar-expand-lg navbar-light px-5 d-flex justify-content-between rounded"
+    >
       <Link
         href={{
           pathname: "/",
         }}
       >
         <a className="navbar-brand" href="#">
-          <Image src={NavLogo} width="125" height="70" alt="" />
+          <Image src={NavLogo} width="125" height="70" alt="" loading="lazy" />
         </a>
       </Link>
 

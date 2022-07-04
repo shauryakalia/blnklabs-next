@@ -1,6 +1,6 @@
 ---
 rightTitle:'EXP. 02',
-videoUrl:'/assets/4thPage/BABYDEVIL2.gif',
+videoUrl:'/assets/4thPage/BABYDEVIL2.mp4',
 imgUrls:'/assets/4thPage/01.jpg|/assets/4thPage/02.jpg|/assets/4thPage/03.jpg|/assets/4thPage/04.jpg|/assets/4thPage/05.jpg|/assets/4thPage/06.jpg|/assets/4thPage/07.jpg|/assets/4thPage/08.jpg',
 descTitle:'BABY DEVIL ',
 descSubTitle:'POWER , AGGRESSION',

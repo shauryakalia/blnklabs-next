@@ -79,7 +79,7 @@ export default function ExperimentPage({ data, inverse = false }) {
                       }}
                     >
                       <a>
-                        <i className="bi bi-play-circle block fs50"></i>
+                        <i className="bi bi-play-circle block fs50 textDark"></i>
                       </a>
                     </Link>
                   </div>
@@ -88,7 +88,9 @@ export default function ExperimentPage({ data, inverse = false }) {
               </div>
               <div className={`col-xs-12 col-md-9 p-sm-0 p-md-5 `}>
                 <span
-                  className={`textRight d-block fs50  ${inverse ? "pr20" : ""}`}
+                  className={`textRight d-block fs50  ${
+                    inverse || _isMobile ? "pr20" : ""
+                  }`}
                 >
                   {rightTitle}
                 </span>
@@ -102,16 +104,14 @@ export default function ExperimentPage({ data, inverse = false }) {
                     {rightTitle.split(".")[1]}
                   </span>
                 </div>
-                {/* <video
-                  // ref="video"
+                <video
                   className="img-fluid p20"
                   muted
                   loop
                   // autoPlay
                 >
                   <source src={videoUrl} type="video/mp4" />
-                </video> */}
-                <img className="img-fluid p20" src={videoUrl}></img>
+                </video>
                 <div className={`filledBox ${inverse ? "right270" : ""}`}></div>
               </div>
             </div>

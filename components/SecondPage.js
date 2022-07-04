@@ -12,7 +12,12 @@ export default function SecondPage({ data }) {
     <div className="m-sm-0 m-md-5">
       <h2 className="text-center mb-5">{title}</h2>
       <div className={`canvas-wrapper ${_isMobile ? "" : "d-flex"}`}>
-        <a href="#" className="canvas col-xs-11 col-md-3 ml-2">
+        <a
+          href="#"
+          className={`canvas col-xs-11 col-md-3 ml-2 ${
+            _isMobile ? "canvas-mobile" : ""
+          }`}
+        >
           <div className="canvas_img-wrapper">
             <Image
               height="200px"
@@ -20,6 +25,7 @@ export default function SecondPage({ data }) {
               className="canvas_img"
               src={imgUrl1}
               alt=""
+              loading="lazy"
             />
           </div>
           <div
@@ -36,15 +42,16 @@ export default function SecondPage({ data }) {
         </a>
         <a
           href="#"
-          className={`canvas col-xs-11 col-md-3 mt-5 ${
-            _isMobile ? "ml0" : "ml40"
-          }`}
+          className={`canvas ${
+            _isMobile ? "canvas-mobile" : ""
+          } col-xs-11 col-md-3 mt-5 ${_isMobile ? "ml0" : "ml40"}`}
         >
           <div
             className="canvas_img-wrapper"
             style={{
               backgroundImage: `url(${imgUrl3})`,
               backgroundSize: "cover",
+              marginTop: _isMobile ? "30%" : "0",
             }}
           >
             <div className="img-border">
@@ -54,12 +61,13 @@ export default function SecondPage({ data }) {
                 className="canvas_img"
                 src={imgUrl2}
                 alt=""
+                loading="lazy"
               />
             </div>
           </div>
           <div
             className={`canvas_copy ${
-              _isMobile ? "mobile-canvas_copy--left" : ""
+              _isMobile ? "mobile-canvas_copy--right" : ""
             }`}
           >
             <span className="canvas_copy_title2">VISUAL</span>
@@ -70,6 +78,16 @@ export default function SecondPage({ data }) {
           </div>
         </a>
       </div>
+      {_isMobile ? (
+        <>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </>
+      ) : null}
     </div>
   );
 }
