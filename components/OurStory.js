@@ -44,7 +44,7 @@ export default function OurStory({ data }) {
               className="squareBox"
             ></div>
           </div>
-          <div className="fs70 clrgainsboro">{t2}</div>
+          <div className="fs70 clrgainsboro lightFont">{t2}</div>
           <br />
 
           <div className="enterButton">

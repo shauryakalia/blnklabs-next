@@ -57,7 +57,7 @@ export default function ExperimentPage({ data, inverse = false }) {
                 }`}
               >
                 <div>
-                  <span className="text-center themeClr mb-3 leftTitle">
+                  <span className="text-center themeClr mb-3 leftTitle lightFont">
                     <span className="d-block fs40">{lt1}</span>
                     <span className="fs50 d-block">
                       <span>{lt2}</span>
@@ -88,7 +88,7 @@ export default function ExperimentPage({ data, inverse = false }) {
               </div>
               <div className={`col-xs-12 col-md-9 p-sm-0 p-md-5 `}>
                 <span
-                  className={`textRight d-block fs50  ${
+                  className={`textRight d-block fs50 lightFont ${
                     inverse || _isMobile ? "pr20" : ""
                   }`}
                 >
@@ -108,7 +108,7 @@ export default function ExperimentPage({ data, inverse = false }) {
                   className="img-fluid p20"
                   muted
                   loop
-                  // autoPlay
+                  autoPlay
                 >
                   <source src={videoUrl} type="video/mp4" />
                 </video>

@@ -3,6 +3,11 @@
   src: url(Poppins-Regular.ttf);
 }
 
+@font-face {
+  font-family: poppinsLightFont;
+  src: url(Poppins-Light.ttf);
+}
+
 html,
 body {
   padding: 0;
@@ -94,6 +99,10 @@ a {
 
 .clrgainsboro {
   color: gainsboro;
+}
+
+.lightFont {
+  font-family: poppinsLightFont !important;
 }
 
 .squareBox {

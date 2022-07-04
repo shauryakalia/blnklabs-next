@@ -40,11 +40,11 @@ export default function ourStoryDetails() {
     <>
       <div className={`p-5`}>
         <div className="col-md-12 textLeft">
-          <p className="h2 themeClr txtBold">{lt1}</p>
-          <p className="h2 themeClr txtBold fontWeightNormal">{lt2}</p>
-          <p className="h2 themeClr txtBold">{lt3}</p>
+          <span className="themeClr d-block txtBold fs40">{lt1}</span>
+          <span className="themeClr d-block  fs70 lightFont">{lt2}</span>
+          <span className="themeClr d-block txtBold fs40">{lt3}</span>
         </div>
-        <div className="col-md-12 text-muted textRight pl-5 d-flex justify-content-end">
+        <div className="col-md-12 text-muted textRight pl-5 d-flex justify-content-end lightFont">
           <div className="col-md-7">
             <p>{rightTitle1}</p>
             <p>{rightTitle2}</p>

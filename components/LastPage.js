@@ -4,11 +4,11 @@ export default function LastPage({ data }) {
   return (
     <div className="lastSection">
       <div className="d-flex justify-content-end textRight">
-        <p className="col-md-8 h5 p-4 textDark mt-4">{endText}</p>
+        <p className="col-md-8 h5 p-4 textDark mt-4 lightFont">{endText}</p>
       </div>
 
       <div className="lastImageSection p-3 d-flex justify-content-between align-items-start">
-        <div className="verticalText col-md-1 text-center">
+        <div className="verticalText col-md-1 text-center lightFont">
           FOR MORE INFO <i className="bi bi-arrow-down"></i>
         </div>
         <div className="col-md-11">
