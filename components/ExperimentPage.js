@@ -102,7 +102,7 @@ export default function ExperimentPage({ data, inverse = false }) {
                     {rightTitle.split(".")[1]}
                   </span>
                 </div>
-                <video
+                {/* <video
                   // ref="video"
                   className="img-fluid p20"
                   muted
@@ -110,7 +110,8 @@ export default function ExperimentPage({ data, inverse = false }) {
                   // autoPlay
                 >
                   <source src={videoUrl} type="video/mp4" />
-                </video>
+                </video> */}
+                <img className="img-fluid p20" src={videoUrl}></img>
                 <div className={`filledBox ${inverse ? "right270" : ""}`}></div>
               </div>
             </div>
