@@ -1,0 +1,28 @@
+{
+  "name": "blnklabs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.3",
+    "gray-matter": "^4.0.3",
+    "jquery": "^3.6.0",
+    "marked": "^4.0.17",
+    "next": "12.1.6",
+    "popper.js": "^1.16.1",
+    "react": "18.2.0",
+    "react-device-detect": "^2.2.2",
+    "react-dom": "18.2.0",
+    "serve": "^13.0.2"
+  },
+  "devDependencies": {
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.1.6"
+  }
+}
