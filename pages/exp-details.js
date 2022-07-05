@@ -53,7 +53,7 @@ export default function ExpDetails() {
 
       <div>
         <div className="scrollToTopBtn" onClick={() => scrollToSection()}>
-          <i class="bi bi-arrow-up-square"></i>
+          <i className="bi bi-arrow-up-square"></i>
         </div>
       </div>
     </>

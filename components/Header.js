@@ -36,21 +36,21 @@ export default function Header(props) {
       {_isMobile ? (
         <div className="d-flex flex-column align-items-end">
           <span className="themeClr d-block">A Cre-Tech Company</span>
-          <span class="themeClr fs30" onClick={() => setExpandNav(!expandNav)}>
-            <i class="bi bi-list"></i>
+          <span className="themeClr fs30" onClick={() => setExpandNav(!expandNav)}>
+            <i className="bi bi-list"></i>
           </span>
         </div>
       ) : null}
 
       {_isMobile ? (
         <div
-          class={`collapse navbar-collapse text-center ${
+          className={`collapse navbar-collapse text-center ${
             expandNav ? "show" : ""
           }`}
           id="navbarNav"
         >
-          <ul class="navbar-nav">
-            <li class="nav-item">
+          <ul className="navbar-nav">
+            <li className="nav-item">
               <a
                 className="nav-link"
                 onClick={() => scrollToSection("contactUs")}
@@ -58,7 +58,7 @@ export default function Header(props) {
                 Home
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
                 className="nav-link"
                 onClick={() => scrollToSection("projects")}
@@ -66,7 +66,7 @@ export default function Header(props) {
                 Projects
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
                 className="nav-link"
                 onClick={() => scrollToSection("contactUs")}

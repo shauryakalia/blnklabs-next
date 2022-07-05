@@ -49,13 +49,13 @@ export default function LastPage({ data }) {
             <span className="d-block">
               <div className="d-flex flex-column justify-content-end fs20 ">
                 <Link href="https://www.linkedin.com/company/blnklabs/?viewAsMember=true">
-                  <i class="bi bi-linkedin"></i>
+                  <i className="bi bi-linkedin"></i>
                 </Link>
                 <Link href="https://www.instagram.com/blnk_creative_design_studios/">
-                  <i class="bi bi-instagram"></i>
+                  <i className="bi bi-instagram"></i>
                 </Link>
                 <Link href="https://www.behance.net/blankcreativedesigns">
-                  <i class="bi bi-behance"></i>
+                  <i className="bi bi-behance"></i>
                 </Link>
               </div>
             </span>
@@ -74,13 +74,13 @@ export default function LastPage({ data }) {
             <div>info.blnklabs.com</div>
             <div className="d-flex justify-content-start fs20 ">
               <Link href="https://www.linkedin.com/company/blnklabs/?viewAsMember=true">
-                <i class="bi bi-linkedin"></i>
+                <i className="bi bi-linkedin"></i>
               </Link>
               <Link href="https://www.instagram.com/blnk_creative_design_studios/">
-                <i class="bi bi-instagram mx-3"></i>
+                <i className="bi bi-instagram mx-3"></i>
               </Link>
               <Link href="https://www.behance.net/blankcreativedesigns">
-                <i class="bi bi-behance"></i>
+                <i className="bi bi-behance"></i>
               </Link>
             </div>
           </span>
