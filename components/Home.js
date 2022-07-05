@@ -10,13 +10,19 @@ export default function Home({ data }) {
   const [text1, text2] = highlightText.split("h3 ");
   return (
     <>
-      <div id="home" className="d-flex pt-1">
-        <div className="col-md-2 d-flex justify-content-end">
+      <div id="home" className={` pt-1 ${_isMobile ? "" : "d-flex"}`}>
+        <div
+          className={`col-md-2 d-flex justify-content-end ${
+            _isMobile ? "d-none" : ""
+          }`}
+        >
           <i className="bi bi-play-circle homePlayBtn"></i>
         </div>
         <div
           id="homeVideo"
-          className="carousel slide carousel-fade col-md-10"
+          className={`carousel slide carousel-fade ${
+            _isMobile ? "col-md-12" : "col-md-10"
+          }`}
           data-mdb-ride="carousel"
         >
           <div className="carousel-inner">
@@ -27,8 +33,11 @@ export default function Home({ data }) {
             </div>
           </div>
         </div>
+        <div className={`col-md-12 text-center ${_isMobile ? "" : "d-none"}`}>
+          <i className="bi bi-play-circle mobileHomePlayBtn"></i>
+        </div>
       </div>
-      <div className="p-5 h5 text-muted">
+      <div className={` h5 text-muted ${_isMobile ? "px-5 pb-5" : "p-5"}`}>
         <p>
           <span>{text1}</span>
           <span className="h4 text-dark">{text2}</span>

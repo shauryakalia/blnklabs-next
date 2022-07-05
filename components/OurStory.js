@@ -24,7 +24,7 @@ export default function OurStory({ data }) {
   const [t1, t2] = title.split(" ");
 
   return (
-    <div id="contactUs">
+    <div>
       <div className="d-flex justify-content-center align-items-center ourStoryBox">
         <div className="text-center">
           <div className="d-flex justify-content-center align-items-center">

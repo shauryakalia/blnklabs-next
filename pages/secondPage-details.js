@@ -3,7 +3,7 @@ import Router, { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import React, { useState, useEffect } from "react";
 
-export default function ExpDetails() {
+export default function SecondPageDetails() {
   const [_isMobile, setMobile] = useState();
   const [innerHeight, setInnerHeight] = useState(700);
   useEffect(() => {
@@ -22,39 +22,40 @@ export default function ExpDetails() {
 
   return images ? (
     <>
-      <div id="exp1">
-        {images.map((img, idx) => (
-          <>
-            <div
-              className="exp-details-imgs mb-1"
-              key={idx}
-              style={{ height: _isMobile ? "250px" : `${innerHeight}px` }}
-            >
-              <Image
-                key={idx}
-                layout="fill"
-                src={img}
-                alt={`${0}-slide`}
-                key={0}
-                placeholder={images[0]}
-                loading="lazy"
-              />
-            </div>
-            <div className={idx === 0 && descTitle !== "" ? "" : "d-none"}>
-              <div className="p-5 text-center h5 themeClr">
-                <p className="fs40 letterSpacing8">{descTitle}</p>
-                <p className="h5">{descSubTitle}</p>
-                <p className="fs16">{desc}</p>
-              </div>
-            </div>
-          </>
-        ))}
+      <div id="exp1" className="d-flex justify-content-center p-5">
+        <div
+          className="exp-details-imgs w-50"
+          style={{ height: _isMobile ? "250px" : `${innerHeight}px` }}
+        >
+          <Image
+            layout="fill"
+            src={images[0]}
+            alt={`${0}-slide`}
+            placeholder={images[0]}
+            loading="lazy"
+          />
+        </div>
+        <div
+          className="exp-details-imgs w-50"
+          style={{ height: _isMobile ? "250px" : `${innerHeight}px` }}
+        >
+          <Image
+            layout="fill"
+            src={images[1]}
+            alt={`${0}-slide`}
+            placeholder={images[0]}
+            loading="lazy"
+          />
+        </div>
       </div>
 
       <div>
         <div className="scrollToTopBtn" onClick={() => scrollToSection()}>
           <i class="bi bi-arrow-up-square"></i>
         </div>
+        {/* <div className="scrollToTopBtn" onClick={() => scrollToSection()}>
+          Experiments
+        </div> */}
       </div>
     </>
   ) : null;

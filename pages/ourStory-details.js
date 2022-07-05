@@ -59,7 +59,7 @@ export default function ourStoryDetails() {
           _isMobile ? "p-3" : "p-1 d-flex"
         }  justify-content-around align-items-center`}
       >
-        <div className="col-xs-12 col-md-6 textRight">
+        <div className="col-xs-12 col-md-5 textRight mr-5">
           <Image
             src={osImgUrl1}
             width="500"
@@ -69,8 +69,17 @@ export default function ourStoryDetails() {
             loading="lazy"
           />
         </div>
-        <div className="col-xs-12 col-md-6 text-center">
-          <span className="h1 pl-4 lastImgText lastImgTextStyle">STABLITY</span>
+        <div className="col-xs-12 col-md-5 text-center">
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle">
+              STABLITY
+            </span>
+          </div>
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
+              STABLITY
+            </span>
+          </div>
         </div>
       </div>
 
@@ -79,14 +88,23 @@ export default function ourStoryDetails() {
         className={`${
           _isMobile
             ? "p-3 flex-column-reverse"
-            : "p-1  justify-content-around align-items-center"
+            : "p-1  justify-content-around align-items-center ourStoryCard-1"
         } d-flex `}
       >
-        <div className="col-xs-12 col-md-6 text-center">
-          <span className="h1 pl-4 lastImgText lastImgTextStyle">STRENGTH</span>
+        <div className="col-xs-12 col-md-5 text-center mt-200">
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle">
+              STRENGTH
+            </span>
+          </div>
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
+              STRENGTH
+            </span>
+          </div>
         </div>
 
-        <div className="col-xs-12 col-md-6 textLeft">
+        <div className="col-xs-12 col-md-5 textLeft ml-5">
           <Image
             src={osImgUrl2}
             width="500"
@@ -98,13 +116,14 @@ export default function ourStoryDetails() {
         </div>
       </div>
 
-      {/* CALMNESS */}
-      <div
+
+       {/* CALMNESS */}
+       <div
         className={`${
           _isMobile ? "p-3" : "p-1 d-flex"
-        } justify-content-around align-items-center`}
+        }  justify-content-around align-items-center`}
       >
-        <div className="col-xs-12 col-md-6 textRight">
+        <div className="col-xs-12 col-md-5 textRight mr-5">
           <Image
             src={osImgUrl3}
             width="500"
@@ -114,8 +133,17 @@ export default function ourStoryDetails() {
             loading="lazy"
           />
         </div>
-        <div className="col-xs-12 col-md-6 text-center">
-          <span className="h1 pl-4 lastImgText lastImgTextStyle">CALMNESS</span>
+        <div className="col-xs-12 col-md-5 text-center">
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle">
+              CALMNESS
+            </span>
+          </div>
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
+              CALMNESS
+            </span>
+          </div>
         </div>
       </div>
 
@@ -124,14 +152,23 @@ export default function ourStoryDetails() {
         className={`${
           _isMobile
             ? "p-3 flex-column-reverse"
-            : "p-1  justify-content-around align-items-center"
+            : "p-1  justify-content-around align-items-center ourStoryCard-1"
         } d-flex `}
       >
-        <div className="col-xs-12 col-md-6 text-center">
-          <span className="h1 pl-4 lastImgText lastImgTextStyle">POWER</span>
+        <div className="col-xs-12 col-md-5 text-center mt-200">
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle">
+              POWER
+            </span>
+          </div>
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
+              POWER
+            </span>
+          </div>
         </div>
 
-        <div className="col-xs-12 col-md-6 textLeft">
+        <div className="col-xs-12 col-md-5 textLeft ml-5">
           <Image
             src={osImgUrl4}
             width="500"
@@ -156,7 +193,14 @@ export default function ourStoryDetails() {
           />
         </div>
         <div className="col-xs-12 col-md-12 text-center mt-3">
-          <span className="h1 pl-4 lastImgText lastImgTextStyle">THRILL</span>
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle">THRILL</span>
+          </div>
+          <div>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
+              THRILL
+            </span>
+          </div>
         </div>
       </div>
       <div>

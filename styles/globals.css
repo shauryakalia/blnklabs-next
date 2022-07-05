@@ -57,6 +57,15 @@ a {
   z-index: 2;
 }
 
+.mobileHomePlayBtn {
+  font-size: 50px;
+  color: #fb7c2c !important;
+  position: relative;
+  bottom: 40px;
+  display: inline-block;
+  z-index: 2;
+}
+
 .dflex {
   display: flex !important;
 }
@@ -128,25 +137,20 @@ a {
   font-size: calc(1em + 30vmin);
   font-weight: 900;
   color: tomato;
+}
 
-  --x-offset: 0.0625em;
-  --y-offset: 0.3925em;
-  --stroke: 0.035em;
+.mt-90 {
+  margin-top: 90%;
+}
 
-  --background-color: white;
-  --stroke-color: #fb7c2c;
-
-  text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
-    calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke))
-      3px var(--stroke-color);
-
-  @supports (text-shadow: 1px 1px 1px 1px black) {
-    h1 {
-      text-shadow: var(--x-offset) var(--y-offset) 0px 0px
-          var(--background-color),
-        var(--x-offset) var(--y-offset) var(--stroke) 0px var(--stroke-color);
-    }
-  }
+.lastImgTextStyle-2 {
+  color: white !important;
+  text-shadow: -1px 1px 0 #fb7c2c, 1px 1px 0 #fb7c2c, 1px -1px 0 #fb7c2c,
+    -1px -1px 0 #fb7c2c;
+  position: relative;
+  z-index: -1;
+  top: -50px;
+  color: white !important;
 }
 
 .lastSection {
@@ -279,9 +283,49 @@ strong {
   width: 0;
 }
 
+.ourStoryCard-1,
+.ourStoryCard-2,
+.ourStoryCard-3 {
+  position: relative;
+}
+
+.ourStoryCard-1 {
+  top: -150px;
+}
+
+.lastImgContainer {
+  position: relative;
+}
+
+.topLeft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.mt-200 {
+  margin-top: 200px !important;
+}
+
+.ourStoryCard-3 {
+  top: -450px;
+}
+
+.letterSpacing8 {
+  letter-spacing: 8px;
+}
+
 .leftTitle {
   line-height: 1.2;
   font-weight: 100;
+}
+
+.fs16 {
+  font-size: 16px !important;
+}
+
+.fs20 {
+  font-size: 20px;
 }
 
 .fs30 {
@@ -380,7 +424,17 @@ strong {
 
 .mobile-canvas_copy--left {
   bottom: -30% !important;
-  left: 75% !important;
+  left: 45% !important;
+}
+
+.text_canvas_copy_title {
+  position: relative;
+  left: -45% !important;
+}
+
+.text_canvas_copy_details {
+  position: relative;
+  left: -59% !important;
 }
 
 .mobile-canvas_copy--right {
@@ -433,6 +487,7 @@ strong {
   font-size: 40px;
   padding-right: 35px;
   padding-top: 50px;
+  z-index: 2;
 }
 
 .canvas_copy_subtitle {
