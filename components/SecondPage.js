@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { isMobile } from "react-device-detect";
 import Image from "next/image";
 import Link from "next/link";
+import Rellax from "rellax";
 
 export default function SecondPage({ data }) {
   const {
@@ -17,9 +18,20 @@ export default function SecondPage({ data }) {
   const [_isMobile, setMobile] = useState();
   useEffect(() => {
     setMobile(isMobile);
+    setNewParllaxEle("secondPageContainer", 0);
   }, [setMobile]);
+
+  const setNewParllaxEle = (className, speed) => {
+    return new Rellax(`.${className}`, {
+      speed: speed,
+      wrapper: null,
+      vertical: true,
+      horizontal: false,
+    });
+  };
+
   return (
-    <div className="m-sm-0 m-md-5">
+    <div className="m-sm-0 m-md-5 secondPageContainer">
       <h2 className="text-center mb-5">{title}</h2>
 
       <div className={`canvas-wrapper ${_isMobile ? "" : "d-flex"}`}>
@@ -39,8 +51,8 @@ export default function SecondPage({ data }) {
           >
             <div className="canvas_img-wrapper">
               <Image
-               height="200px"
-               width="350px"
+                height="200px"
+                width="350px"
                 className="canvas_img"
                 src={imgUrl1}
                 alt=""
@@ -94,8 +106,8 @@ export default function SecondPage({ data }) {
             >
               <div className="img-border">
                 <Image
-                    height="200px"
-                    width="350px"
+                  height="200px"
+                  width="350px"
                   className="canvas_img"
                   src={imgUrl2}
                   alt=""

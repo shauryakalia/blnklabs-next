@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Header from "../components/Header";
+import Parllax from "../components/Parllax";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/assets/blnklogo.ico" />
       </Head>
       <Header />
+      <Parllax imgSrc="/assets/parllax1.jpeg" />
       <Component {...pageProps} />
     </>
   );

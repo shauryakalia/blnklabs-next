@@ -1,13 +1,27 @@
 import { isMobile } from "react-device-detect";
 import React, { useState, useEffect } from "react";
+import Rellax from "rellax";
 
 export default function Home({ data }) {
   const [_isMobile, setMobile] = useState();
+
   useEffect(() => {
     setMobile(isMobile);
+    setNewParllaxEle("homePlayBtn", -3.50);
   }, [setMobile]);
+
+  const setNewParllaxEle = (className, speed) => {
+    return new Rellax(`.${className}`, {
+      speed: speed,
+      wrapper: null,
+      vertical: true,
+      horizontal: false,
+    });
+  };
+
   const { videoUrl, content1, content2, highlightText } = data;
   const [text1, text2] = highlightText.split("h3 ");
+
   return (
     <>
       <div id="home" className={` pt-1 ${_isMobile ? "" : "d-flex"}`}>

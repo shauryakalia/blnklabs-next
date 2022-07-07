@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { useState, useEffect } from "react";
 import Home from "../components/Home";
 import SecondPage from "../components/SecondPage";
 import ExperimentPage from "../components/ExperimentPage";
@@ -17,8 +18,35 @@ export default function MainPage({ completeData }) {
     ourStory,
     lastPage,
   } = completeData;
+
+  let imgsUrls = [];
+
+  if (home.parllaxImgs) {
+    imgsUrls = home.parllaxImgs.split("|");
+  }
+
+  const [activeBgImgIdx, setActiveBgImgIdx] = useState(0);
+  const [scrollPos, setScrollPos] = useState(0);
+
+  const setActiveBgImgIdxFn = () => {
+    // if (window.pageYOffset > scrollPos * 50) {
+    //   setScrollPos(scrollPos * 10);
+    //   setActiveBgImgIdx(Math.floor(Math.random() * 3) + 1);
+    // }
+  };
+
+  useEffect(() => {
+    const onScroll = () => setActiveBgImgIdxFn();
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div>
+    <div
+      className="slowImgSrchEffect"
+      // style={{ backgroundImage: `url(${imgsUrls[activeBgImgIdx]})` }}
+    >
       <Home data={home} />
       <SecondPage data={secondPage} />
       <br />
