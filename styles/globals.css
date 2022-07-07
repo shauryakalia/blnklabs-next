@@ -303,6 +303,22 @@ strong {
   left: 16px;
 }
 
+.textCenter {
+  text-align: center !important;
+}
+
+.noPadding {
+  padding: 0 !important;
+}
+
+.mt-50 {
+  margin-top: 50px !important;
+}
+
+.mt-100 {
+  margin-top: 100px !important;
+}
+
 .mt-200 {
   margin-top: 200px !important;
 }

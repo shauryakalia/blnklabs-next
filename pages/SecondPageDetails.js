@@ -22,10 +22,10 @@ export default function SecondPageDetails() {
 
   return images ? (
     <>
-      <div id="exp1" className="d-flex justify-content-center p-5">
+      <div id="exp1" className=" justify-content-center px-5">
         <div
-          className="exp-details-imgs w-50"
-          style={{ height: _isMobile ? "250px" : `${innerHeight}px` }}
+          className="exp-details-imgs col-md-12"
+          style={{ height: _isMobile ? "250px" : `1500px` }}
         >
           <Image
             layout="fill"
@@ -36,8 +36,8 @@ export default function SecondPageDetails() {
           />
         </div>
         <div
-          className="exp-details-imgs w-50"
-          style={{ height: _isMobile ? "250px" : `${innerHeight}px` }}
+          className="exp-details-imgs col-md-12"
+          style={{ height: _isMobile ? "250px" : `1500px` }}
         >
           <Image
             layout="fill"

@@ -25,7 +25,7 @@ export default function SecondPage({ data }) {
       <div className={`canvas-wrapper ${_isMobile ? "" : "d-flex"}`}>
         <Link
           href={{
-            pathname: "/secondPage-details",
+            pathname: "/SecondPageDetails",
             query: {
               images: [imgUrl4, imgUrl5],
             },
@@ -40,7 +40,7 @@ export default function SecondPage({ data }) {
             <div className="canvas_img-wrapper">
               <Image
                height="200px"
-               width="400px"
+               width="350px"
                 className="canvas_img"
                 src={imgUrl1}
                 alt=""
@@ -72,7 +72,7 @@ export default function SecondPage({ data }) {
         </Link>
         <Link
           href={{
-            pathname: "/secondPage-details",
+            pathname: "/SecondPageDetails",
             query: {
               images: [imgUrl6, imgUrl7],
             },
@@ -95,7 +95,7 @@ export default function SecondPage({ data }) {
               <div className="img-border">
                 <Image
                     height="200px"
-                    width="400px"
+                    width="350px"
                   className="canvas_img"
                   src={imgUrl2}
                   alt=""

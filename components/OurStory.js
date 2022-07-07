@@ -50,7 +50,7 @@ export default function OurStory({ data }) {
           <div className="enterButton">
             <Link
               href={{
-                pathname: "/ourStory-details",
+                pathname: "/OurStoryDetails",
                 query: {
                   rightTitle1,
                   rightTitle2,

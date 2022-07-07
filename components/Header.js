@@ -53,7 +53,7 @@ export default function Header(props) {
             <li className="nav-item">
               <a
                 className="nav-link"
-                onClick={() => scrollToSection("contactUs")}
+                onClick={() => scrollToSection("home")}
               >
                 Home
               </a>

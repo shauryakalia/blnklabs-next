@@ -37,7 +37,7 @@ export default function ExperimentPage({ data, inverse = false }) {
   return (
     <>
       <div
-        className={`m-sm-0 m-md-2 px-sm-0 ${_isMobile ? "mt-5" : ""}`}
+        className={`m-sm-0 m-md-2 px-sm-0 ${_isMobile ? "" : ""}`}
         id="projects"
       >
         <div
@@ -57,7 +57,18 @@ export default function ExperimentPage({ data, inverse = false }) {
                 }`}
               >
                 <div>
-                  <span className="text-center themeClr mb-3 leftTitle lightFont">
+                  <span
+                    className={`text-center themeClr mb-3 leftTitle lightFont ${
+                      leftTitle ? "" : "d-none"
+                    }`}
+                  >
+                    {leftTitle && _isMobile ? (
+                      <>
+                        <div className="mt-50"></div>
+                      </>
+                    ) : (
+                      ""
+                    )}
                     <span className="d-block fs40">{lt1}</span>
                     <span className="fs50 d-block">
                       <span>{lt2}</span>
@@ -66,10 +77,12 @@ export default function ExperimentPage({ data, inverse = false }) {
                     </span>
                     <span className="d-block fs50">{lt4}</span>
                   </span>
-                  <div className={leftTitle ? "mt-90" : ""}>
+                  <div
+                    className={leftTitle ? (_isMobile ? "mt-50" : "mt-90") : ""}
+                  >
                     <Link
                       href={{
-                        pathname: "/exp-details",
+                        pathname: "/ExpDetails",
                         query: {
                           images,
                           descTitle,
@@ -88,7 +101,9 @@ export default function ExperimentPage({ data, inverse = false }) {
               </div>
               <div className={`col-xs-12 col-md-9 p-sm-0 p-md-5 `}>
                 <span
-                  className={`textRight d-block fs50 lightFont ${
+                  className={`${
+                    _isMobile ? "textCenter noPadding" : "textRight"
+                  } d-block fs50 lightFont ${
                     inverse || _isMobile ? "pr20" : ""
                   }`}
                 >
