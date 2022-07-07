@@ -294,6 +294,7 @@ strong {
 .lineborderLeft {
   border: 0;
   border-left: 1px solid gray;
+  margin-left: 5px
 }
 
 .line {

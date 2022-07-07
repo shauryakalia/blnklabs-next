@@ -206,8 +206,8 @@ export default function ourStoryDetails() {
       <div>
         <Image
           src={osImgUrl7}
-          width="1400"
-          height="700"
+          width="1920"
+          height="1080"
           alt="ourStory-1"
           className="mt-5 shadow"
           loading="lazy"
