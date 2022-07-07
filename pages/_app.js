@@ -291,7 +291,6 @@ const addMouseTrail = () => {
 `
   );
 
-
   const displayShader = compileShader(
     gl.FRAGMENT_SHADER,
     `
@@ -1050,7 +1049,7 @@ const addMouseTrail = () => {
   }
 
   initFramebuffers();
-  multipleSplats(parseInt(Math.random() * 20) + 5);
+  // multipleSplats(parseInt(Math.random() * 20) + 5);
 
   let lastColorChangeTime = Date.now();
 
@@ -1070,6 +1069,7 @@ const addMouseTrail = () => {
     for (let i = 0; i < pointers.length; i++) {
       const p = pointers[i];
       if (p.moved) {
+        // here
         splat(p.x, p.y, p.dx, p.dy, p.color);
         p.moved = false;
       }
@@ -1391,6 +1391,9 @@ const addMouseTrail = () => {
 
   function generateColor() {
     let c = HSVtoRGB(Math.random(), 1.0, 1.0);
+    c.r = 1;
+    c.g = 0.5;
+    c.b = 0.5;
     c.r *= 0.15;
     c.g *= 0.15;
     c.b *= 0.15;
@@ -1477,8 +1480,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Header />
       <Parllax imgSrc="/assets/parllax1.jpeg" />
-      <div id="page" class="site">
-        <canvas class="banner_canvas" id="canvas_banner"></canvas>
+      <div id="page" className="site">
+        <canvas className="banner_canvas" id="canvas_banner"></canvas>
       </div>
 
       <Component {...pageProps} />

@@ -28,7 +28,7 @@ export default function ExpDetails() {
             <div
               className="exp-details-imgs mb-1"
               key={idx}
-              style={{ height: _isMobile ? "250px" : `${innerHeight}px` }}
+              style={{ height: _isMobile ? "250px" : `${innerHeight + 100}px` }}
             >
               <Image
                 key={idx}

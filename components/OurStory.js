@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { isMobile } from "react-device-detect";
 export default function OurStory({ data }) {
@@ -24,8 +25,11 @@ export default function OurStory({ data }) {
   const [t1, t2] = title.split(" ");
 
   return (
-    <div>
-      <div className="d-flex justify-content-center align-items-center ourStoryBox">
+    <>
+      <div
+        id="ourStory"
+        className="d-flex justify-content-center align-items-center ourStoryBox"
+      >
         <div className="text-center">
           <div className="d-flex justify-content-center align-items-center">
             <div
@@ -47,7 +51,7 @@ export default function OurStory({ data }) {
           <div className="fs70 clrgainsboro lightFont">{t2}</div>
           <br />
 
-          <div className="enterButton">
+          <div className="enterButton posRel">
             <Link
               href={{
                 pathname: "/OurStoryDetails",
@@ -71,6 +75,6 @@ export default function OurStory({ data }) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

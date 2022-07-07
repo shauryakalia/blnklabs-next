@@ -19,7 +19,7 @@ export default function Header(props) {
   return (
     <nav
       id="blnkheader"
-      className={`navbar navbar-expand-lg navbar-light d-flex justify-content-between rounded ${
+      className={`zIndex10 navbar navbar-expand-lg navbar-light d-flex justify-content-between rounded ${
         _isMobile ? "px-3" : "px-5"
       }`}
     >
@@ -36,7 +36,10 @@ export default function Header(props) {
       {_isMobile ? (
         <div className="d-flex flex-column align-items-end">
           <span className="themeClr d-block">A Cre-Tech Company</span>
-          <span className="themeClr fs30" onClick={() => setExpandNav(!expandNav)}>
+          <span
+            className="themeClr fs30"
+            onClick={() => setExpandNav(!expandNav)}
+          >
             <i className="bi bi-list"></i>
           </span>
         </div>
@@ -51,10 +54,7 @@ export default function Header(props) {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a
-                className="nav-link"
-                onClick={() => scrollToSection("home")}
-              >
+              <a className="nav-link" onClick={() => scrollToSection("home")}>
                 Home
               </a>
             </li>
