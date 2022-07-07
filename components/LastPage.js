@@ -12,7 +12,7 @@ export default function LastPage({ data }) {
   return (
     <div className="lastSection">
       <div className="d-flex justify-content-end textRight">
-        <p className="col-md-8 h5 p-4 textDark mt-4 lightFont">{endText}</p>
+        <p className="col-md-8 h5 w-50 p-4 textDark mt-4 lightFont">{endText}</p>
       </div>
 
       <div className="lastImageSection p-3 d-flex justify-content-between align-items-start">

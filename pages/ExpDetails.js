@@ -8,7 +8,7 @@ export default function ExpDetails() {
   const [innerHeight, setInnerHeight] = useState(700);
   useEffect(() => {
     setMobile(isMobile);
-    if (!images) Router.push("/");
+    // if (!images) Router.push("/");
     setInnerHeight(window.innerHeight);
   }, [setMobile]);
 
