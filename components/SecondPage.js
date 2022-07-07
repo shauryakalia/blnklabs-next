@@ -18,7 +18,7 @@ export default function SecondPage({ data }) {
   const [_isMobile, setMobile] = useState();
   useEffect(() => {
     setMobile(isMobile);
-    setNewParllaxEle("secondPageContainer", 0);
+    // setNewParllaxEle("secondPageContainer", 0);
   }, [setMobile]);
 
   const setNewParllaxEle = (className, speed) => {

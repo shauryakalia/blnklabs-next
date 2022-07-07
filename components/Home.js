@@ -7,7 +7,7 @@ export default function Home({ data }) {
 
   useEffect(() => {
     setMobile(isMobile);
-    setNewParllaxEle("homePlayBtn", -3.50);
+    // setNewParllaxEle("homePlayBtn", -3.50);
   }, [setMobile]);
 
   const setNewParllaxEle = (className, speed) => {
