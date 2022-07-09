@@ -51,7 +51,6 @@ export default function SecondPage({ data }) {
           }}
         >
           <a
-            href="#"
             className={`canvas col-xs-11 col-md-3 ml-2 ${
               _isMobile ? "canvas-mobile" : ""
             }`}
@@ -100,7 +99,6 @@ export default function SecondPage({ data }) {
           }}
         >
           <a
-            href="#"
             className={`canvas ${
               _isMobile ? "canvas-mobile" : ""
             } col-xs-11 col-md-3 mt-5 ${_isMobile ? "ml0" : "ml40"}`}
