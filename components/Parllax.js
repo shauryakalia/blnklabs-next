@@ -3,7 +3,7 @@ import Rellax from "rellax";
 import { isMobile } from "react-device-detect";
 import React, { useState, useEffect } from "react";
 
-export default function Parllax({ imgSrc }) {
+export default function Parllax({ imgSrc, zIndex }) {
   const [_isMobile, setMobile] = useState();
   const [wh, setWh] = useState(800);
 
@@ -28,6 +28,8 @@ export default function Parllax({ imgSrc }) {
         className="exp-details-imgs homeParllax col-md-12"
         style={{
           height: _isMobile ? "-webkit-fill-available" : `${wh + 50}px`,
+          width: "100%",
+          zIndex,
         }}
       >
         <Image

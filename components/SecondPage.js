@@ -8,12 +8,17 @@ export default function SecondPage({ data }) {
   const {
     title,
     imgUrl1,
-    imgUrl2,
     imgUrl3,
     imgUrl4,
     imgUrl5,
     imgUrl6,
-    imgUrl7,
+    imgUrl8,
+    imgUrl9,
+    conTitle,
+    conSubTitle,
+    visTitle,
+    visSubTitle,
+    detailTitle,
   } = data;
   const [_isMobile, setMobile] = useState();
   useEffect(() => {
@@ -39,7 +44,9 @@ export default function SecondPage({ data }) {
           href={{
             pathname: "/SecondPageDetails",
             query: {
-              images: [imgUrl4, imgUrl5],
+              images: [detailTitle, imgUrl6, imgUrl4, imgUrl5],
+              title: conTitle,
+              subTitle: conSubTitle,
             },
           }}
         >
@@ -51,8 +58,8 @@ export default function SecondPage({ data }) {
           >
             <div className="canvas_img-wrapper">
               <Image
-                height="200px"
-                width="350px"
+                height="130px"
+                width="230px"
                 className="canvas_img"
                 src={imgUrl1}
                 alt=""
@@ -86,7 +93,9 @@ export default function SecondPage({ data }) {
           href={{
             pathname: "/SecondPageDetails",
             query: {
-              images: [imgUrl6, imgUrl7],
+              images: [detailTitle, imgUrl8, imgUrl9],
+              title: visTitle,
+              subTitle: visSubTitle,
             },
           }}
         >
@@ -104,7 +113,7 @@ export default function SecondPage({ data }) {
                 marginTop: _isMobile ? "30%" : "0",
               }}
             >
-              <div className="img-border">
+              {/* <div className="img-border">
                 <Image
                   height="200px"
                   width="350px"
@@ -113,7 +122,7 @@ export default function SecondPage({ data }) {
                   alt=""
                   loading="lazy"
                 />
-              </div>
+              </div> */}
             </div>
             <div
               className={`canvas_copy ${

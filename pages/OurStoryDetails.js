@@ -2,12 +2,12 @@ import Image from "next/image";
 import Router, { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import React, { useState, useEffect } from "react";
+import Parllax from "../components/Parllax";
 
 export default function ourStoryDetails() {
   const [_isMobile, setMobile] = useState();
   useEffect(() => {
     setMobile(isMobile);
-    if (!leftTitle) Router.push("/");
   }, [setMobile]);
 
   const router = useRouter();
@@ -38,6 +38,14 @@ export default function ourStoryDetails() {
 
   return leftTitle ? (
     <>
+      <Parllax
+        imgSrc={
+          _isMobile
+            ? "/assets/Lines/mobile04.png"
+            : "/assets/Lines/windows04.png"
+        }
+        zIndex={-5}
+      />
       <div className={`p-5`}>
         <div className="col-md-12 textLeft">
           <span className="themeClr d-block txtBold fs40">{lt1}</span>
@@ -116,9 +124,8 @@ export default function ourStoryDetails() {
         </div>
       </div>
 
-
-       {/* CALMNESS */}
-       <div
+      {/* CALMNESS */}
+      <div
         className={`${
           _isMobile ? "p-3" : "p-1 d-flex"
         }  justify-content-around align-items-center`}
@@ -157,9 +164,7 @@ export default function ourStoryDetails() {
       >
         <div className="col-xs-12 col-md-5 text-center mt-200">
           <div>
-            <span className="h1 pl-4 lastImgText lastImgTextStyle">
-              POWER
-            </span>
+            <span className="h1 pl-4 lastImgText lastImgTextStyle">POWER</span>
           </div>
           <div>
             <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
@@ -203,17 +208,15 @@ export default function ourStoryDetails() {
           </div>
         </div>
       </div>
-      <div>
-        <Image
-          src={osImgUrl7}
-          width="1920"
-          height="1080"
-          alt="ourStory-1"
-          className="mt-5 shadow"
-          loading="lazy"
-        />
-        <p className="text-center ourStoryLastSection">{ourStoryEndText}</p>
-      </div>
+      <Image
+        src={osImgUrl7}
+        width="1920"
+        height="1080"
+        alt="ourStory-1"
+        className="mt-5 shadow"
+        loading="lazy"
+      />
+      <p className="text-center ourStoryLastSection">{ourStoryEndText}</p>
     </>
   ) : null;
 }

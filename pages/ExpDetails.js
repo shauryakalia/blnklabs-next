@@ -2,6 +2,7 @@ import Image from "next/image";
 import Router, { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import React, { useState, useEffect } from "react";
+import Parllax from "../components/Parllax";
 
 export default function ExpDetails() {
   const [_isMobile, setMobile] = useState();
@@ -22,6 +23,14 @@ export default function ExpDetails() {
 
   return images ? (
     <>
+      <Parllax
+        imgSrc={
+          _isMobile
+            ? "/assets/Lines/mobile03.png"
+            : "/assets/Lines/windows03.png"
+        }
+        zIndex={-5}
+      />
       <div id="exp1">
         {images.map((img, idx) => (
           <>

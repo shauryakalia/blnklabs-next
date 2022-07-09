@@ -12,10 +12,16 @@ export default function LastPage({ data }) {
   return (
     <div className="lastSection">
       <div className="d-flex justify-content-end textRight">
-        <p className={`col-md-8 h5 ${_isMobile ? 'w-100' : 'w-50'} p-4 textDark mt-4 lightFont`}>{endText}</p>
+        <p
+          className={`col-md-8 h5 ${
+            _isMobile ? "w-100" : "w-50"
+          } p-4 textDark mt-4 lightFont`}
+        >
+          {endText}
+        </p>
       </div>
 
-      <div className="lastImageSection p-3 d-flex justify-content-between align-items-start">
+      <div className="p-0 d-flex justify-content-between align-items-start">
         <div className="col-md-12 lastImgContainer">
           <div
             className={`verticalText  text-center lightFont topLeft ${
