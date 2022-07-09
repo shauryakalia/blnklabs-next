@@ -1,7 +1,7 @@
 ---
 title:'OUR STORY',
 leftTitle:'ITS AN EMOTION',
-rightTitle1:'Many Product expressed with emotions has the potential to achieve the born goal for its consumers',
+rightTitle1:'Many Product expressed with emotions has the potential to achieve the born goal for its consumers.',
 rightTitle2:'The recent Pandemic helped us to understand the Human emotions at its core
 which came with a motive of connect and disconnect with the Nature.',
 rightTitle3:'We understood those emotions and calcified them into a story to incite

@@ -99,7 +99,11 @@ export default function ourStoryDetails() {
             : "p-1  justify-content-around align-items-center ourStoryCard-1"
         } d-flex `}
       >
-        <div className="col-xs-12 col-md-5 text-center mt-200">
+        <div
+          className={`col-xs-12 col-md-5 text-center ${
+            _isMobile ? "" : "mt-200"
+          } `}
+        >
           <div>
             <span className="h1 pl-4 lastImgText lastImgTextStyle">
               STRENGTH
@@ -162,7 +166,11 @@ export default function ourStoryDetails() {
             : "p-1  justify-content-around align-items-center ourStoryCard-1"
         } d-flex `}
       >
-        <div className="col-xs-12 col-md-5 text-center mt-200">
+        <div
+          className={`col-xs-12 col-md-5 text-center ${
+            _isMobile ? "" : "mt-200"
+          }`}
+        >
           <div>
             <span className="h1 pl-4 lastImgText lastImgTextStyle">POWER</span>
           </div>

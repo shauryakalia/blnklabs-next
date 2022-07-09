@@ -25,19 +25,36 @@ export default function LastPage({ data }) {
         <div className="col-md-12 lastImgContainer">
           <div
             className={`verticalText  text-center lightFont topLeft ${
-              _isMobile ? "fs16" : ""
+              _isMobile ? "fs16 mobileVerticalText" : ""
             }`}
           >
             FOR MORE INFO <i className="bi bi-arrow-down"></i>
           </div>
-          <Image
-            src={!_isMobile ? endImage : mobileEndImage}
-            width="1400"
-            height={_isMobile ? "1000" : "700"}
-            alt="ourStory-1"
-            className="mt-5 shadow"
-            loading="lazy"
-          />
+          {_isMobile ? (
+            <Image
+              src={!_isMobile ? endImage : mobileEndImage}
+              width={_isMobile ? "1200" : "1400"}
+              height={_isMobile ? "1000" : "700"}
+              alt="ourStory-1"
+              className="mt-5 shadow"
+              loading="lazy"
+            />
+          ) : (
+            <div
+              className="w-100"
+              style={{
+                height: _isMobile ? "250px" : "700px",
+              }}
+            >
+              <Image
+                src={!_isMobile ? endImage : mobileEndImage}
+                layout="fill"
+                alt="ourStory-1"
+                className="mt-5 shadow"
+                loading="lazy"
+              />
+            </div>
+          )}
         </div>
       </div>
       {_isMobile ? (

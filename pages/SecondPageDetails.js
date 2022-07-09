@@ -32,7 +32,12 @@ export default function SecondPageDetails() {
         }
         zIndex={-5}
       />
-      <div id="exp1" className="justify-content-center px-5 text-center">
+      <div
+        id="exp1"
+        className={`justify-content-center text-center ${
+          _isMobile ? "px-2" : "px-5"
+        }`}
+      >
         <Image
           height="220px"
           width="220px"
@@ -42,7 +47,7 @@ export default function SecondPageDetails() {
           loading="lazy"
         />
         <div
-          className={`text-center themeClr ${
+          className={`text-center px-2 themeClr ${
             _isMobile ? "" : "secondPageDetailsTitleContainer"
           }`}
         >

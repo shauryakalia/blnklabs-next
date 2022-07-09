@@ -37,6 +37,10 @@ a {
   /* margin-top: -150px; */
 }
 
+.mobileVerticalText {
+  padding-top: 160px !important;
+}
+
 .textDark {
   color: black !important;
 }
