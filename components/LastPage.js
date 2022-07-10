@@ -43,7 +43,7 @@ export default function LastPage({ data }) {
             <div
               className="w-100"
               style={{
-                height: _isMobile ? "250px" : "900px",
+                height: _isMobile ? "250px" : "750px",
               }}
             >
               <Image
@@ -72,13 +72,19 @@ export default function LastPage({ data }) {
             <span className="d-block">
               <div className="d-flex flex-column justify-content-end fs20 ">
                 <Link href="https://www.linkedin.com/company/blnklabs/?viewAsMember=true">
-                  <i className="bi bi-linkedin"></i>
+                  <a target="_blank" rel="noopener noreferrer">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
                 </Link>
                 <Link href="https://www.instagram.com/blnk_creative_design_studios/">
-                  <i className="bi bi-instagram"></i>
+                  <a target="_blank" rel="noopener noreferrer">
+                    <i className="bi bi-instagram"></i>
+                  </a>
                 </Link>
                 <Link href="https://www.behance.net/blankcreativedesigns">
-                  <i className="bi bi-behance"></i>
+                  <a target="_blank" rel="noopener noreferrer">
+                    <i className="bi bi-behance"></i>
+                  </a>
                 </Link>
               </div>
             </span>
@@ -96,23 +102,20 @@ export default function LastPage({ data }) {
           <span className="d-block">
             <div>info.blnklabs.com</div>
             <div className="d-flex justify-content-start fs20 ">
-              <Link
-                target="_blank"
-                href="https://www.linkedin.com/company/blnklabs/?viewAsMember=true"
-              >
-                <i className="bi bi-linkedin"></i>
+              <Link href="https://www.linkedin.com/company/blnklabs/?viewAsMember=true">
+                <a target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-linkedin"></i>
+                </a>
               </Link>
-              <Link
-                target="_blank"
-                href="https://www.instagram.com/blnk_creative_design_studios/"
-              >
-                <i className="bi bi-instagram mx-3"></i>
+              <Link href="https://www.instagram.com/blnk_creative_design_studios/">
+                <a target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-instagram mx-3"></i>
+                </a>
               </Link>
-              <Link
-                target="_blank"
-                href="https://www.behance.net/blankcreativedesigns"
-              >
-                <i className="bi bi-behance"></i>
+              <Link href="https://www.behance.net/blankcreativedesigns">
+                <a target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-behance"></i>
+                </a>
               </Link>
             </div>
           </span>
