@@ -63,9 +63,8 @@ export default function ourStoryDetails() {
 
       {/* STABLITY */}
       <div
-        className={`${
-          _isMobile ? "p-3" : "p-1 d-flex"
-        }  justify-content-around align-items-center`}
+        className={`${_isMobile ? "p-3" : "p-1 d-flex"
+          }  justify-content-around align-items-center`}
       >
         <div className="col-xs-12 col-md-5 textRight mr-5">
           <Image
@@ -93,16 +92,14 @@ export default function ourStoryDetails() {
 
       {/* STRENGTH */}
       <div
-        className={`${
-          _isMobile
+        className={`${_isMobile
             ? "p-3 flex-column-reverse"
             : "p-1  justify-content-around align-items-center ourStoryCard-1"
-        } d-flex `}
+          } d-flex `}
       >
         <div
-          className={`col-xs-12 col-md-5 text-center ${
-            _isMobile ? "" : "mt-200"
-          } `}
+          className={`col-xs-12 col-md-5 text-center ${_isMobile ? "" : "mt-200"
+            } `}
         >
           <div>
             <span className="h1 pl-4 lastImgText lastImgTextStyle">
@@ -130,9 +127,8 @@ export default function ourStoryDetails() {
 
       {/* CALMNESS */}
       <div
-        className={`${
-          _isMobile ? "p-3" : "p-1 d-flex"
-        }  justify-content-around align-items-center`}
+        className={`${_isMobile ? "p-3" : "p-1 d-flex"
+          }  justify-content-around align-items-center`}
       >
         <div className="col-xs-12 col-md-5 textRight mr-5">
           <Image
@@ -160,16 +156,14 @@ export default function ourStoryDetails() {
 
       {/* POWER */}
       <div
-        className={`${
-          _isMobile
+        className={`${_isMobile
             ? "p-3 flex-column-reverse"
             : "p-1  justify-content-around align-items-center ourStoryCard-1"
-        } d-flex `}
+          } d-flex `}
       >
         <div
-          className={`col-xs-12 col-md-5 text-center ${
-            _isMobile ? "" : "mt-200"
-          }`}
+          className={`col-xs-12 col-md-5 text-center ${_isMobile ? "" : "mt-200"
+            }`}
         >
           <div>
             <span className="h1 pl-4 lastImgText lastImgTextStyle">POWER</span>
@@ -194,28 +188,64 @@ export default function ourStoryDetails() {
       </div>
 
       {/* THRILL */}
-      <div className="p-sm-1 p-md-5">
-        <div className="col-xs-12 col-md-12 text-center">
-          <Image
-            src={osImgUrl6}
-            width="500"
-            height="500"
-            alt="ourStory-1"
-            className="mt-5 shadow"
-            loading="lazy"
-          />
-        </div>
-        <div className="col-xs-12 col-md-12 text-center mt-3">
-          <div>
-            <span className="h1 pl-4 lastImgText lastImgTextStyle">THRILL</span>
+      {_isMobile ? (
+        <div
+          className={`${_isMobile
+              ? "p-3 flex-column-reverse"
+              : "p-1  justify-content-around align-items-center ourStoryCard-1"
+            } d-flex `}
+        >
+          <div
+            className={`col-xs-12 col-md-5 text-center ${_isMobile ? "" : "mt-200"
+              }`}
+          >
+            <div>
+              <span className="h1 pl-4 lastImgText lastImgTextStyle">THRILL</span>
+            </div>
+            <div>
+              <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
+                THRILL
+              </span>
+            </div>
           </div>
-          <div>
-            <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
-              THRILL
-            </span>
+
+          <div className="col-xs-12 col-md-5 textLeft ml-5">
+            <Image
+              src={osImgUrl6}
+              width="500"
+              height="500"
+              alt="ourStory-1"
+              className="mt-5 shadow"
+              loading="lazy"
+            />
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="p-sm-1 p-md-5">
+          <div className="col-xs-12 col-md-12 text-center">
+            <Image
+              src={osImgUrl6}
+              width="500"
+              height="500"
+              alt="ourStory-1"
+              className="mt-5 shadow"
+              loading="lazy"
+            />
+          </div>
+          <div className="col-xs-12 col-md-12 text-center mt-3">
+            <div>
+              <span className="h1 pl-4 lastImgText lastImgTextStyle">THRILL</span>
+            </div>
+            <div>
+              <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
+                THRILL
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+
+
       <Image
         src={osImgUrl7}
         width="1920"
