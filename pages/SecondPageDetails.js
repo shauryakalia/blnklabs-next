@@ -58,7 +58,7 @@ export default function SecondPageDetails() {
         </div>
         <div
           className={`exp-details-imgs col-md-12 ${_isMobile ? "pt-5" : ""}}`}
-          style={{ height: _isMobile ? "600px" : `1800px` }}
+          style={{ height: _isMobile ? "600px" : `2200px` }}
         >
           <Image
             layout="fill"
@@ -70,7 +70,7 @@ export default function SecondPageDetails() {
         </div>
         <div
           className="exp-details-imgs col-md-12"
-          style={{ height: _isMobile ? "600px" : `1800px` }}
+          style={{ height: _isMobile ? "600px" : `2200px` }}
         >
           <Image
             layout="fill"
@@ -83,7 +83,7 @@ export default function SecondPageDetails() {
         {images[3] ? (
           <div
             className="exp-details-imgs col-md-12"
-            style={{ height: _isMobile ? "600px" : `1800px` }}
+            style={{ height: _isMobile ? "600px" : `2200px` }}
           >
             <Image
               layout="fill"

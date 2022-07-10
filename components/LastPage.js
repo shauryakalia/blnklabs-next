@@ -43,7 +43,7 @@ export default function LastPage({ data }) {
             <div
               className="w-100"
               style={{
-                height: _isMobile ? "250px" : "700px",
+                height: _isMobile ? "250px" : "900px",
               }}
             >
               <Image
@@ -96,13 +96,22 @@ export default function LastPage({ data }) {
           <span className="d-block">
             <div>info.blnklabs.com</div>
             <div className="d-flex justify-content-start fs20 ">
-              <Link href="https://www.linkedin.com/company/blnklabs/?viewAsMember=true">
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/company/blnklabs/?viewAsMember=true"
+              >
                 <i className="bi bi-linkedin"></i>
               </Link>
-              <Link href="https://www.instagram.com/blnk_creative_design_studios/">
+              <Link
+                target="_blank"
+                href="https://www.instagram.com/blnk_creative_design_studios/"
+              >
                 <i className="bi bi-instagram mx-3"></i>
               </Link>
-              <Link href="https://www.behance.net/blankcreativedesigns">
+              <Link
+                target="_blank"
+                href="https://www.behance.net/blankcreativedesigns"
+              >
                 <i className="bi bi-behance"></i>
               </Link>
             </div>
