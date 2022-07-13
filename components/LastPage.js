@@ -5,8 +5,10 @@ import Link from "next/link";
 
 export default function LastPage({ data }) {
   const [_isMobile, setMobile] = useState();
+  const [innerHeight, setInnerHeight] = useState();
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
+    setInnerHeight(window.innerHeight);
   }, [setMobile]);
   const { endText, endImage, mobileEndImage } = data;
   return (
@@ -43,7 +45,7 @@ export default function LastPage({ data }) {
             <div
               className="w-100"
               style={{
-                height: _isMobile ? "250px" : "750px",
+                height: `${innerHeight}px`,
               }}
             >
               <Image
@@ -76,7 +78,7 @@ export default function LastPage({ data }) {
                     <i className="bi bi-linkedin"></i>
                   </a>
                 </Link>
-                <Link href="https://www.instagram.com/blnk_creative_design_studios/">
+                <Link href="https://www.instagram.com/blnk_labs/">
                   <a target="_blank" rel="noopener noreferrer">
                     <i className="bi bi-instagram"></i>
                   </a>

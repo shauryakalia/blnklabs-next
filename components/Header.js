@@ -13,7 +13,7 @@ export default function Header(props) {
   const [expandNav, setExpandNav] = useState(false);
   const [_isMobile, setMobile] = useState();
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
   }, [setMobile]);
 
   return (

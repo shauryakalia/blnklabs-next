@@ -6,7 +6,7 @@ export default function Home({ data }) {
   const [_isMobile, setMobile] = useState();
 
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
     // setNewParllaxEle("homePlayBtn", -3.50);
   }, [setMobile]);
 

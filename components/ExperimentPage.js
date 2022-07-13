@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ExperimentPage({ data, inverse = false }) {
   const [_isMobile, setMobile] = useState();
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
   }, [setMobile]);
 
   const {
@@ -38,7 +38,7 @@ export default function ExperimentPage({ data, inverse = false }) {
     <>
       <div
         className={`m-sm-0 m-md-2 px-sm-0 ${_isMobile ? "" : ""}`}
-        id="projects"
+        id={leftTitle ? "projects" : ""}
       >
         <div
           id="exp1Video"
@@ -56,7 +56,7 @@ export default function ExperimentPage({ data, inverse = false }) {
                   leftTitle ? "" : "align-items-center"
                 }`}
               >
-                <div>
+                <div style={{ marginLeft: _isMobile ? "" : "30px" }}>
                   <span
                     className={`text-center themeClr mb-3 leftTitle lightFont ${
                       leftTitle ? "" : "d-none"

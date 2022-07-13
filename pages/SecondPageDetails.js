@@ -2,6 +2,7 @@ import Image from "next/image";
 import Router, { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 import Parllax from "../components/Parllax";
 
@@ -9,7 +10,7 @@ export default function SecondPageDetails() {
   const [_isMobile, setMobile] = useState();
   const [innerHeight, setInnerHeight] = useState(700);
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
     // if (!images) Router.push("/");
     setInnerHeight(window.innerHeight);
   }, [setMobile]);
@@ -20,7 +21,14 @@ export default function SecondPageDetails() {
   };
 
   const router = useRouter();
-  const { images, title, subTitle } = router.query;
+  const {
+    images,
+    title,
+    subTitle,
+    linkText,
+    bottomLink,
+    bottomLinkObj,
+  } = router.query;
 
   return images ? (
     <>
@@ -58,7 +66,9 @@ export default function SecondPageDetails() {
         </div>
         <div
           className={`exp-details-imgs col-md-12 ${_isMobile ? "pt-5" : ""}}`}
-          style={{ height: _isMobile ? "600px" : `2200px` }}
+          style={{
+            height: _isMobile ? `${innerHeight}px` : `${innerHeight * 2.5}px`,
+          }}
         >
           <Image
             layout="fill"
@@ -70,7 +80,9 @@ export default function SecondPageDetails() {
         </div>
         <div
           className="exp-details-imgs col-md-12"
-          style={{ height: _isMobile ? "600px" : `2200px` }}
+          style={{
+            height: _isMobile ? `${innerHeight}px` : `${innerHeight * 2.5}px`,
+          }}
         >
           <Image
             layout="fill"
@@ -83,7 +95,9 @@ export default function SecondPageDetails() {
         {images[3] ? (
           <div
             className="exp-details-imgs col-md-12"
-            style={{ height: _isMobile ? "600px" : `2200px` }}
+            style={{
+              height: _isMobile ? `${innerHeight}px` : `${innerHeight * 2.5}px`,
+            }}
           >
             <Image
               layout="fill"
@@ -97,8 +111,20 @@ export default function SecondPageDetails() {
       </div>
 
       <div>
-        <div className="scrollToTopBtn" onClick={() => scrollToSection()}>
-          <i className="bi bi-arrow-up-square"></i>
+        <div
+          className="scrollToTopBtn shadow-lg"
+          onClick={() => {
+            console.log(bottomLinkObj);
+            router.push({
+              pathname: `/${bottomLink}`,
+              query: { ...JSON.parse(bottomLinkObj) },
+            });
+            if (bottomLink === "") {
+              setTimeout(() => scrollToSection("projects"), 200);
+            }
+          }}
+        >
+          {linkText} <i className="bi bi-arrow-right-square"></i>
         </div>
         {/* <div className="scrollToTopBtn" onClick={() => scrollToSection()}>
           Experiments

@@ -8,7 +8,7 @@ export default function ExpDetails() {
   const [_isMobile, setMobile] = useState();
   const [innerHeight, setInnerHeight] = useState(700);
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
     // if (!images) Router.push("/");
     setInnerHeight(window.innerHeight);
   }, [setMobile]);
@@ -37,7 +37,7 @@ export default function ExpDetails() {
             <div
               className="exp-details-imgs mb-1"
               key={idx}
-              style={{ height: _isMobile ? "250px" : `${innerHeight + 100}px` }}
+              style={{ height: _isMobile ? "250px" : `600px` }}
             >
               <Image
                 key={idx}

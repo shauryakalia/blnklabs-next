@@ -8,7 +8,7 @@ export default function Parllax({ imgSrc, zIndex }) {
   const [wh, setWh] = useState(800);
 
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
     // setNewParllaxEle("homeParllax", -10);
     setWh(window.innerHeight);
   }, [setMobile]);

@@ -22,7 +22,7 @@ export default function SecondPage({ data }) {
   } = data;
   const [_isMobile, setMobile] = useState();
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
     // setNewParllaxEle("secondPageContainer", 0);
   }, [setMobile]);
 
@@ -47,6 +47,16 @@ export default function SecondPage({ data }) {
               images: [detailTitle, imgUrl6, imgUrl4, imgUrl5],
               title: conTitle,
               subTitle: conSubTitle,
+              linkText: "VISUAL EXPERIMENTATION",
+              bottomLink: "SecondPageDetails",
+              bottomLinkObj: JSON.stringify({
+                images: [detailTitle, imgUrl8, imgUrl9],
+                title: visTitle,
+                subTitle: visSubTitle,
+                linkText: "Experiments",
+                bottomLink: "",
+                bottomLinkObj: JSON.stringify({}),
+              }),
             },
           }}
         >
@@ -95,6 +105,9 @@ export default function SecondPage({ data }) {
               images: [detailTitle, imgUrl8, imgUrl9],
               title: visTitle,
               subTitle: visSubTitle,
+              linkText: "Experiments",
+              bottomLink: "",
+              bottomLinkObj: JSON.stringify({}),
             },
           }}
         >

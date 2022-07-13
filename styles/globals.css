@@ -47,11 +47,14 @@ a {
 
 .scrollToTopBtn {
   cursor: pointer;
-  font-size: 40px;
+  font-size: 25px;
   position: fixed;
-  bottom: 0;
+  bottom: 10px;
   right: 20px;
   color: black;
+  background: gainsboro;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .headerMenu {
@@ -529,7 +532,7 @@ strong {
   color: #fb7c2c !important;
   font-size: 40px;
   padding-right: 35px;
-  padding-top: 270px;
+  padding-top: 150px;
   z-index: 2;
 }
 

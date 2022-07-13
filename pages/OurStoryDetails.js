@@ -7,7 +7,7 @@ import Parllax from "../components/Parllax";
 export default function ourStoryDetails() {
   const [_isMobile, setMobile] = useState();
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
   }, [setMobile]);
 
   const router = useRouter();
@@ -63,8 +63,9 @@ export default function ourStoryDetails() {
 
       {/* STABLITY */}
       <div
-        className={`${_isMobile ? "p-3" : "p-1 d-flex"
-          }  justify-content-around align-items-center`}
+        className={`${
+          _isMobile ? "p-3" : "p-1 d-flex"
+        }  justify-content-around align-items-center`}
       >
         <div className="col-xs-12 col-md-5 textRight mr-5">
           <Image
@@ -92,14 +93,16 @@ export default function ourStoryDetails() {
 
       {/* STRENGTH */}
       <div
-        className={`${_isMobile
+        className={`${
+          _isMobile
             ? "p-3 flex-column-reverse"
             : "p-1  justify-content-around align-items-center ourStoryCard-1"
-          } d-flex `}
+        } d-flex `}
       >
         <div
-          className={`col-xs-12 col-md-5 text-center ${_isMobile ? "" : "mt-200"
-            } `}
+          className={`col-xs-12 col-md-5 text-center ${
+            _isMobile ? "" : "mt-200"
+          } `}
         >
           <div>
             <span className="h1 pl-4 lastImgText lastImgTextStyle">
@@ -127,8 +130,9 @@ export default function ourStoryDetails() {
 
       {/* CALMNESS */}
       <div
-        className={`${_isMobile ? "p-3" : "p-1 d-flex"
-          }  justify-content-around align-items-center`}
+        className={`${
+          _isMobile ? "p-3" : "p-1 d-flex"
+        }  justify-content-around align-items-center`}
       >
         <div className="col-xs-12 col-md-5 textRight mr-5">
           <Image
@@ -156,14 +160,16 @@ export default function ourStoryDetails() {
 
       {/* POWER */}
       <div
-        className={`${_isMobile
+        className={`${
+          _isMobile
             ? "p-3 flex-column-reverse"
             : "p-1  justify-content-around align-items-center ourStoryCard-1"
-          } d-flex `}
+        } d-flex `}
       >
         <div
-          className={`col-xs-12 col-md-5 text-center ${_isMobile ? "" : "mt-200"
-            }`}
+          className={`col-xs-12 col-md-5 text-center ${
+            _isMobile ? "" : "mt-200"
+          }`}
         >
           <div>
             <span className="h1 pl-4 lastImgText lastImgTextStyle">POWER</span>
@@ -190,17 +196,21 @@ export default function ourStoryDetails() {
       {/* THRILL */}
       {_isMobile ? (
         <div
-          className={`${_isMobile
+          className={`${
+            _isMobile
               ? "p-3 flex-column-reverse"
               : "p-1  justify-content-around align-items-center ourStoryCard-1"
-            } d-flex `}
+          } d-flex `}
         >
           <div
-            className={`col-xs-12 col-md-5 text-center ${_isMobile ? "" : "mt-200"
-              }`}
+            className={`col-xs-12 col-md-5 text-center ${
+              _isMobile ? "" : "mt-200"
+            }`}
           >
             <div>
-              <span className="h1 pl-4 lastImgText lastImgTextStyle">THRILL</span>
+              <span className="h1 pl-4 lastImgText lastImgTextStyle">
+                THRILL
+              </span>
             </div>
             <div>
               <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
@@ -234,7 +244,9 @@ export default function ourStoryDetails() {
           </div>
           <div className="col-xs-12 col-md-12 text-center mt-3">
             <div>
-              <span className="h1 pl-4 lastImgText lastImgTextStyle">THRILL</span>
+              <span className="h1 pl-4 lastImgText lastImgTextStyle">
+                THRILL
+              </span>
             </div>
             <div>
               <span className="h1 pl-4 lastImgText lastImgTextStyle-2">
@@ -244,7 +256,6 @@ export default function ourStoryDetails() {
           </div>
         </div>
       )}
-
 
       <Image
         src={osImgUrl7}

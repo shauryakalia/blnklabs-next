@@ -14,7 +14,7 @@ export default function MainPage({ completeData }) {
   const [_isMobile, setMobile] = useState();
 
   useEffect(() => {
-    setMobile(isMobile);
+    if (window.innerWidth < 768) setMobile(isMobile);
   }, [setMobile]);
 
   const {
