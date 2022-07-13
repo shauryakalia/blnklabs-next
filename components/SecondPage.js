@@ -65,7 +65,12 @@ export default function SecondPage({ data }) {
               _isMobile ? "canvas-mobile" : ""
             }`}
           >
-            <div className="canvas_img-wrapper">
+            <div
+              className="canvas_img-wrapper"
+              style={{
+                height: _isMobile ? "100%" : "80%",
+              }}
+            >
               <Image
                 height="130px"
                 width="230px"
@@ -122,19 +127,9 @@ export default function SecondPage({ data }) {
                 backgroundImage: `url(${imgUrl3})`,
                 backgroundSize: "cover",
                 marginTop: _isMobile ? "30%" : "0",
+                height: _isMobile ? "100%" : "80%",
               }}
-            >
-              {/* <div className="img-border">
-                <Image
-                  height="200px"
-                  width="350px"
-                  className="canvas_img"
-                  src={imgUrl2}
-                  alt=""
-                  loading="lazy"
-                />
-              </div> */}
-            </div>
+            ></div>
             <div
               className={`canvas_copy ${
                 _isMobile ? "mobile-canvas_copy--right" : ""

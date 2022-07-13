@@ -47,8 +47,6 @@ export default function MainPage({ completeData }) {
         <Home data={home} />
         <SecondPage data={secondPage} />
         <br />
-        <br />
-        <br />
         <ExperimentPage data={thirdPage} />
         <br />
         <ExperimentPage data={fourthPage} inverse={true} />

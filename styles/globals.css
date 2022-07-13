@@ -461,7 +461,7 @@ strong {
 
 .canvas_copy {
   position: absolute;
-  bottom: 0;
+  bottom: 20%;
   left: 85%;
   text-transform: uppercase;
   color: #fb7c2c;
@@ -489,7 +489,7 @@ strong {
 }
 
 .canvas_copy--left {
-  left: -25%;
+  left: -30%;
 }
 
 .canvas_copy_title {
