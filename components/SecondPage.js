@@ -67,9 +67,9 @@ export default function SecondPage({ data }) {
           >
             <div
               className="canvas_img-wrapper"
-              style={{
-                height: _isMobile ? "100%" : "80%",
-              }}
+              // style={{
+              //   height: _isMobile ? "100%" : "80%",
+              // }}
             >
               <Image
                 height="130px"
@@ -127,7 +127,7 @@ export default function SecondPage({ data }) {
                 backgroundImage: `url(${imgUrl3})`,
                 backgroundSize: "cover",
                 marginTop: _isMobile ? "30%" : "0",
-                height: _isMobile ? "100%" : "80%",
+                // height: _isMobile ? "100%" : "80%",
               }}
             ></div>
             <div
