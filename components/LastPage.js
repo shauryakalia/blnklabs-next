@@ -100,7 +100,7 @@ export default function LastPage({ data }) {
                   <i className="bi bi-linkedin"></i>
                 </a>
               </Link>
-              <Link href="https://www.instagram.com/blnk_creative_design_studios/">
+              <Link href="https://www.instagram.com/blnk_labs/">
                 <a target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-instagram mx-3"></i>
                 </a>
