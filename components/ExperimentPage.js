@@ -56,8 +56,12 @@ export default function ExperimentPage({ data, inverse = false }) {
                   leftTitle ? "" : "align-items-center"
                 }`}
               >
-                <div style={{ marginLeft: _isMobile ? "" : "30px" }}>
-                  <span
+                <div
+                  style={{
+                    marginLeft: _isMobile ? "" : !inverse ? "100px" : "",
+                  }}
+                >
+                  <div
                     className={`text-center themeClr mb-3 leftTitle lightFont ${
                       leftTitle ? "" : "d-none"
                     }`}
@@ -76,9 +80,9 @@ export default function ExperimentPage({ data, inverse = false }) {
                       <span>{lt3}</span>
                     </span>
                     <span className="d-block fs50">{lt4}</span>
-                  </span>
+                  </div>
                   <div
-                    className={leftTitle ? (_isMobile ? "mt-50" : "mt-90") : ""}
+                    className={leftTitle ? (_isMobile ? "mt-50" : "mt-50p") : ""}
                   >
                     <Link
                       href={{

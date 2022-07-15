@@ -21,8 +21,12 @@ export default function SecondPage({ data }) {
     detailTitle,
   } = data;
   const [_isMobile, setMobile] = useState();
+  const [_isIpad, setIpad] = useState();
+
   useEffect(() => {
     if (window.innerWidth < 768) setMobile(isMobile);
+    if (window.innerWidth > 768 && window.innerWidth < 1100) setIpad(true);
+
     // setNewParllaxEle("secondPageContainer", 0);
   }, [setMobile]);
 
@@ -39,7 +43,7 @@ export default function SecondPage({ data }) {
     <div className="m-sm-0 m-md-5 secondPageContainer">
       <h2 className="text-center mb-5">{title}</h2>
 
-      <div className={`canvas-wrapper ${_isMobile ? "" : "d-flex"}`}>
+      <div className={`canvas-wrapper  ${_isMobile ? "" : "d-flex"}`}>
         <Link
           href={{
             pathname: "/SecondPageDetails",
@@ -67,9 +71,12 @@ export default function SecondPage({ data }) {
           >
             <div
               className="canvas_img-wrapper"
-              // style={{
-              //   height: _isMobile ? "100%" : "80%",
-              // }}
+              style={{
+                height: _isIpad ? "300px" : "100%",
+                width: _isIpad ? "230px" : "100%",
+                border: "1px solid black",
+                margin: _isIpad ? "0 -30px" : "",
+              }}
             >
               <Image
                 height="130px"
@@ -79,27 +86,29 @@ export default function SecondPage({ data }) {
                 alt=""
                 loading="lazy"
               />
-            </div>
-            <div
-              className={`canvas_copy ${
-                _isMobile ? "mobile-canvas_copy--left" : "canvas_copy--left"
-              }`}
-            >
-              <span
-                className={`canvas_copy_title ${
-                  _isMobile ? "text_canvas_copy_title" : ""
+              <div
+                className={`canvas_copy ${
+                  _isIpad ? "ipadCanvasCopyLeft" : ""
+                } ${
+                  _isMobile ? "mobile-canvas_copy--left" : "canvas_copy--left"
                 }`}
               >
-                CONCEPT
-              </span>
-              <span className="canvas_copy_title">EXPERIMENTATION</span>
-              <span
-                className={`canvas_copy_details text-dark ${
-                  _isMobile ? "text_canvas_copy_details" : ""
-                }`}
-              >
-                Know more <i className="bi bi-arrow-right"></i>
-              </span>
+                <span
+                  className={`canvas_copy_title ${
+                    _isMobile ? "text_canvas_copy_title" : ""
+                  }`}
+                >
+                  CONCEPT
+                </span>
+                <span className="canvas_copy_title">EXPERIMENTATION</span>
+                <span
+                  className={`canvas_copy_details text-dark ${
+                    _isMobile ? "text_canvas_copy_details" : ""
+                  }`}
+                >
+                  Know more <i className="bi bi-arrow-right"></i>
+                </span>
+              </div>
             </div>
           </a>
         </Link>
@@ -127,19 +136,21 @@ export default function SecondPage({ data }) {
                 backgroundImage: `url(${imgUrl3})`,
                 backgroundSize: "cover",
                 marginTop: _isMobile ? "30%" : "0",
-                // height: _isMobile ? "100%" : "80%",
+                height: _isIpad ? "300px" : "100%",
+                width: _isIpad ? "230px" : "100%",
               }}
-            ></div>
-            <div
-              className={`canvas_copy ${
-                _isMobile ? "mobile-canvas_copy--right" : ""
-              }`}
             >
-              <span className="canvas_copy_title2">VISUAL</span>
-              <span className="canvas_copy_title2">EXPERIMENTATION</span>
-              <span className="canvas_copy_details2 text-dark">
-                <i className="bi bi-arrow-left"></i> Know more
-              </span>
+              <div
+                className={`canvas_copy ${
+                  _isIpad ? "ipadCanvasCopyRight" : ""
+                } ${_isMobile ? "mobile-canvas_copy--right" : ""}`}
+              >
+                <span className="canvas_copy_title2">VISUAL</span>
+                <span className="canvas_copy_title2">EXPERIMENTATION</span>
+                <span className="canvas_copy_details2 text-dark">
+                  <i className="bi bi-arrow-left"></i> Know more
+                </span>
+              </div>
             </div>
           </a>
         </Link>

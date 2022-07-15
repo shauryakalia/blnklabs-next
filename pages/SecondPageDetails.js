@@ -64,55 +64,44 @@ export default function SecondPageDetails() {
           </div>
           <div className={`fs20 ${_isMobile ? "" : "px-5"}`}>{subTitle}</div>
         </div>
-        <div
-          className={`exp-details-imgs col-md-12 ${_isMobile ? "pt-5" : ""}}`}
-          style={{
-            height: _isMobile ? `${innerHeight}px` : `${innerHeight * 2.5}px`,
-          }}
-        >
-          <Image
-            layout="fill"
-            src={images[1]}
-            alt={`${0}-slide`}
-            placeholder={images[0]}
-            loading="lazy"
-          />
-        </div>
-        <div
-          className="exp-details-imgs col-md-12"
-          style={{
-            height: _isMobile ? `${innerHeight}px` : `${innerHeight * 2.5}px`,
-          }}
-        >
-          <Image
-            layout="fill"
-            src={images[2]}
-            alt={`${0}-slide`}
-            placeholder={images[0]}
-            loading="lazy"
-          />
-        </div>
+        <br />
+
+        <Image
+          width={3840}
+          height={6137}
+          layout="responsive"
+          src={images[1]}
+          alt={`${0}-slide`}
+          placeholder={images[0]}
+          loading="lazy"
+        />
+
+        <Image
+          width={3840}
+          height={6137}
+          layout="responsive"
+          src={images[2]}
+          alt={`${0}-slide`}
+          placeholder={images[0]}
+          loading="lazy"
+        />
+
         {images[3] ? (
-          <div
-            className="exp-details-imgs col-md-12"
-            style={{
-              height: _isMobile ? `${innerHeight}px` : `${innerHeight * 2.5}px`,
-            }}
-          >
-            <Image
-              layout="fill"
-              src={images[3]}
-              alt={`${0}-slide`}
-              placeholder={images[0]}
-              loading="lazy"
-            />
-          </div>
+          <Image
+            width={3840}
+            height={6137}
+            layout="responsive"
+            src={images[3]}
+            alt={`${0}-slide`}
+            placeholder={images[0]}
+            loading="lazy"
+          />
         ) : null}
       </div>
 
       <div>
         <div
-          className="scrollToTopBtn shadow-lg"
+          className="shadow-lg text-center p-5 fs20"
           onClick={() => {
             console.log(bottomLinkObj);
             router.push({
@@ -120,15 +109,15 @@ export default function SecondPageDetails() {
               query: { ...JSON.parse(bottomLinkObj) },
             });
             if (bottomLink === "") {
-              setTimeout(() => scrollToSection("projects"), 200);
+              setTimeout(() => scrollToSection("projects"), 1000);
             }
           }}
         >
-          {linkText} <i className="bi bi-arrow-right-square"></i>
+          <div>
+            <i className="bi bi-play-circle secondPagePlayButton"></i>
+          </div>
+          <div>{linkText}</div>
         </div>
-        {/* <div className="scrollToTopBtn" onClick={() => scrollToSection()}>
-          Experiments
-        </div> */}
       </div>
     </>
   ) : null;

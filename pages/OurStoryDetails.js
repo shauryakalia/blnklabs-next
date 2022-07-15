@@ -259,10 +259,11 @@ export default function ourStoryDetails() {
 
       <Image
         src={osImgUrl7}
-        width="1920"
-        height="1080"
+        width={1920}
+        height={1080}
         alt="ourStory-1"
         className="mt-5 shadow"
+        layout="responsive"
         loading="lazy"
       />
       <p className="text-center ourStoryLastSection">{ourStoryEndText}</p>

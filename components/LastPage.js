@@ -34,26 +34,17 @@ export default function LastPage({ data }) {
           </div>
           {_isMobile ? (
             <Image
-              src={!_isMobile ? endImage : mobileEndImage}
-              width={_isMobile ? "1200" : "1400"}
-              height={_isMobile ? "1000" : "700"}
-              alt="ourStory-1"
-              className="mt-5 shadow"
-              loading="lazy"
+              src={mobileEndImage}
+              width={828}
+              height={707}
             />
           ) : (
-            <div
-              className="w-100"
-              style={{
-                height: `${innerHeight}px`,
-              }}
-            >
+            <div>
               <Image
-                src={!_isMobile ? endImage : mobileEndImage}
-                layout="fill"
-                alt="ourStory-1"
-                className="mt-5 shadow"
-                loading="lazy"
+                src={endImage}
+                width={1920}
+                height={1080}
+                layout="responsive"
               />
             </div>
           )}

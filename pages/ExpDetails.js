@@ -34,21 +34,18 @@ export default function ExpDetails() {
       <div id="exp1">
         {images.map((img, idx) => (
           <>
-            <div
-              className="exp-details-imgs mb-1"
+            <Image
               key={idx}
-              style={{ height: _isMobile ? "250px" : `600px` }}
-            >
-              <Image
-                key={idx}
-                layout="fill"
-                src={img}
-                alt={`${0}-slide`}
-                key={0}
-                placeholder={images[0]}
-                loading="lazy"
-              />
-            </div>
+              width={5760}
+              height={3240}
+              layout="responsive"
+              src={img}
+              alt={`${0}-slide`}
+              key={0}
+              placeholder={images[0]}
+              className="mb-1"
+              loading="lazy"
+            />
             <div className={idx === 0 && descTitle !== "" ? "" : "d-none"}>
               <div className="p-5 text-center h5 themeClr">
                 <p className="fs40 letterSpacing8">{descTitle}</p>
