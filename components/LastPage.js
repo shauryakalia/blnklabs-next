@@ -57,7 +57,7 @@ export default function LastPage({ data }) {
             className="mb-5 p-3 w-100 d-flex justify-content-between align-items-center"
           >
             <span className="d-block">
-              <div>info.blnklabs.com</div>
+              <div>info@blnklabs.com</div>
               <div>+91 8650419419</div>
               <div>+91 9164660069</div>
             </span>
@@ -93,7 +93,7 @@ export default function LastPage({ data }) {
           className="mb-5 p-3 w-100 d-flex justify-content-between align-items-end"
         >
           <span className="d-block">
-            <div>info.blnklabs.com</div>
+            <div>info@blnklabs.com</div>
             <div className="d-flex justify-content-start fs20 ">
               <Link href="https://www.linkedin.com/company/blnklabs/?viewAsMember=true">
                 <a target="_blank" rel="noopener noreferrer">
