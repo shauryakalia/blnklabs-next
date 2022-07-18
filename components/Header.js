@@ -3,9 +3,23 @@ import NavLogo from "../public/assets/blnklogo.png";
 import { isMobile } from "react-device-detect";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Router, { useRouter } from "next/router";
 
 export default function Header(props) {
+  const router = useRouter();
   const scrollToSection = (elemId) => {
+    const url = window.location.href;
+    if (url.length > 30) {
+      router.push("/");
+      setTimeout(() => {
+        redirectWithAnimation(elemId);
+      }, 1000);
+    } else {
+      redirectWithAnimation(elemId);
+    }
+  };
+
+  const redirectWithAnimation = (elemId) => {
     var element = document.getElementById(elemId);
     if (element) element.scrollIntoView({ behavior: "smooth" });
   };

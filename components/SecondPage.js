@@ -22,10 +22,12 @@ export default function SecondPage({ data }) {
   } = data;
   const [_isMobile, setMobile] = useState();
   const [_isIpad, setIpad] = useState();
+  const [_isMac, setMac] = useState();
 
   useEffect(() => {
     if (window.innerWidth < 768) setMobile(isMobile);
     if (window.innerWidth > 768 && window.innerWidth < 1100) setIpad(true);
+    if (window.innerWidth > 1400) setMac(true);
 
     // setNewParllaxEle("secondPageContainer", 0);
   }, [setMobile]);
@@ -67,7 +69,8 @@ export default function SecondPage({ data }) {
           <a
             className={`canvas col-xs-11 col-md-3 ml-2 ${
               _isMobile ? "canvas-mobile" : ""
-            }`}
+            } `}
+            style={_isMac ? { height: "600px" } : null}
           >
             <div
               className="canvas_img-wrapper"
@@ -129,6 +132,7 @@ export default function SecondPage({ data }) {
             className={`canvas ${
               _isMobile ? "canvas-mobile" : ""
             } col-xs-11 col-md-3 mt-5 ${_isMobile ? "ml0" : "ml40"}`}
+            style={_isMac ? { height: "600px" } : null}
           >
             <div
               className="canvas_img-wrapper"

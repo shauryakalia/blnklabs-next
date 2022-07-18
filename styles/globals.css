@@ -117,7 +117,9 @@ a {
 }
 
 .right270 {
-  right: 365px !important;
+  position: relative !important;
+  float: right;
+  top: -102px;
 }
 
 .clrgainsboro {
@@ -417,7 +419,7 @@ strong {
 }
 
 .canvas-mobile {
-  width: 320px !important;
+  width: 312px !important;
   margin: 10% !important;
 }
 
