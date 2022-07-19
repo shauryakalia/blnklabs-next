@@ -27,7 +27,7 @@ export default function Home({ data }) {
     return (
       <div
         id="myModal"
-        class="modal"
+        className="modal"
         style={{
           display: showModal ? "block" : "none",
           height: _isMobile ? "-webkit-fill-available" : `100%`,
@@ -37,9 +37,9 @@ export default function Home({ data }) {
             : "/assets/Lines/windows01.png",
         }}
       >
-        <div class="modal-content" style={{ width: _isMobile ? "90%" : "60%" }}>
-          <div class="modal-body">
-            <span class="close" onClick={() => setShowModal(!showModal)}>
+        <div className="modal-content" style={{ width: _isMobile ? "90%" : "60%" }}>
+          <div className="modal-body">
+            <span className="close" onClick={() => setShowModal(!showModal)}>
               &times;
             </span>
 
@@ -52,9 +52,9 @@ export default function Home({ data }) {
                   : ""
               }
               title="BLNKLABS"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>

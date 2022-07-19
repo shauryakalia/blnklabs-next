@@ -408,6 +408,10 @@ strong {
   height: 100%;
 }
 
+.m0px {
+  margin: 0px !important;
+}
+
 .canvas {
   position: relative;
   display: block;
@@ -491,6 +495,10 @@ strong {
 .mobile-canvas_copy--right {
   left: -18% !important;
   bottom: -30% !important;
+}
+
+.ipad-canvas_copy--right {
+  left: 92% !important;
 }
 
 .canvas_copy--left {

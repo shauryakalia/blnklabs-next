@@ -27,7 +27,7 @@ export default function SecondPage({ data }) {
   useEffect(() => {
     if (window.innerWidth < 768) setMobile(isMobile);
     if (window.innerWidth > 768 && window.innerWidth < 1100) setIpad(true);
-    if (window.innerWidth > 1400) setMac(true);
+    if (window.innerWidth > 1600) setMac(true);
 
     // setNewParllaxEle("secondPageContainer", 0);
   }, [setMobile]);
@@ -132,22 +132,29 @@ export default function SecondPage({ data }) {
             className={`canvas ${
               _isMobile ? "canvas-mobile" : ""
             } col-xs-11 col-md-3 mt-5 ${_isMobile ? "ml0" : "ml40"}`}
-            style={_isMac ? { height: "600px" } : null}
+            style={_isMac ? { height: "600px" } : { padding: 0 }}
           >
             <div
               className="canvas_img-wrapper"
               style={{
-                backgroundImage: `url(${imgUrl3})`,
                 backgroundSize: "cover",
                 marginTop: _isMobile ? "30%" : "0",
                 height: _isIpad ? "300px" : "100%",
                 width: _isIpad ? "230px" : "100%",
               }}
             >
+              <Image
+                className="canvas_img"
+                layout="fill"
+                src={imgUrl3}
+                alt=""
+                loading="lazy"
+                className="m0px"
+              />
               <div
                 className={`canvas_copy ${
                   _isIpad ? "ipadCanvasCopyRight" : ""
-                } ${_isMobile ? "mobile-canvas_copy--right" : ""}`}
+                } ${_isMobile ? "mobile-canvas_copy--right" : ""} ${_isMac ? "ipad-canvas_copy--right" : ""} `}
               >
                 <span className="canvas_copy_title2">VISUAL</span>
                 <span className="canvas_copy_title2">EXPERIMENTATION</span>
