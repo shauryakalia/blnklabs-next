@@ -767,3 +767,9 @@ strong {
   text-decoration: none;
   cursor: pointer;
 }
+
+@media only screen and (min-width: 1500px) and (max-width: 1600px) {
+  .col-md-3 {
+    width: 23% !important;
+  }
+}
